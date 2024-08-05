@@ -314,7 +314,6 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url(./img/hero-bg.png);
 	background-image: url(./img/AdobeStock_443709176.jpeg);
 	background-size: cover;
 	background-position: top center;
