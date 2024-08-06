@@ -59,30 +59,38 @@
   </section>
   <!-- End Header -->
    
-    <!-- Modal for Login/Signup -->
-    <div id="loginModal" class="modal">
-      <div class="modal-content">
-          <span class="close">&times;</span>
+  <!-- Modal for Login/Signup -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
           <div id="loginForm">
-              <h3>Login</h3>
-              <label for="loginUsername">Username:</label>
-              <input type="text" id="loginUsername" name="loginUsername" required><br><br>
-              <label for="loginPassword">Password:</label>
-              <input type="password" id="loginPassword" name="loginPassword" required><br><br>
-              <button type="submit" id="loginSubmit">Login</button>
+              <h3><span class="custom-box12">  Sign Up/Login</span></h3>
+              <form>
+                  <label for="loginUsername" style="color: beige; font-size: 13px;">Username:</label>
+                  <input type="text" id="loginUsername" name="loginUsername" required>
+                  <label for="loginPassword" style="color: beige; font-size: 13px;">Password:</label>
+                  <input type="password" id="loginPassword" name="loginPassword" required>
+                  <button type="submit" id="loginSubmit">Login</button>
+                  <p style="color: aqua;"> Don't have an account? <a href="#" id="showSignup" style="color: lightblue;">Sign Up</a></p>
+              </form>
           </div>
           <div id="signupForm" style="display: none;">
               <h3>Sign Up</h3>
-              <label for="signupUsername">Username:</label>
-              <input type="text" id="signupUsername" name="signupUsername" required><br><br>
-              <label for="signupEmail">Email:</label>
-              <input type="email" id="signupEmail" name="signupEmail" required><br><br>
-              <label for="signupPassword">Password:</label>
-              <input type="password" id="signupPassword" name="signupPassword" required><br><br>
-              <button type="submit" id="signupSubmit">Sign Up</button>
+              <form>
+                  <label for="signupUsername">Username:</label>
+                  <input type="text" id="signupUsername" name="signupUsername" required>
+                  <label for="signupEmail">Email:</label>
+                  <input type="email" id="signupEmail" name="signupEmail" required>
+                  <label for="signupPassword">Password:</label>
+                  <input type="password" id="signupPassword" name="signupPassword" required>
+                  <button type="submit" id="signupSubmit">Sign Up</button>
+                  <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+              </form>
           </div>
       </div>
   </div>
+</div>
 
 
 

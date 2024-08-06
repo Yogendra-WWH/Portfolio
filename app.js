@@ -188,6 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal();
         }
     });
+    
 
     // Handle login form submission
     loginForm.addEventListener('submit', function(event) {
