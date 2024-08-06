@@ -16,25 +16,7 @@ menu_item.forEach((item) => {
     });
 });
 
-// Project items animation on scroll
-document.addEventListener('DOMContentLoaded', function() {
-    const projectItems = document.querySelectorAll('.project-item');
 
-    const animateOnScroll = () => {
-        projectItems.forEach(item => {
-            const rect = item.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100) { // Trigger when the item is within 100px of the viewport
-                item.classList.add('animated');
-            }
-        });
-    };
-
-    // Initial check
-    animateOnScroll();
-
-    // Check on scroll
-    window.addEventListener('scroll', animateOnScroll);
-});
 
 // WhatsApp button functionality (example)
 document.querySelector('.whatsapp-button').addEventListener('click', function(e) {
