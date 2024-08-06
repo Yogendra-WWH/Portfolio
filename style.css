@@ -140,6 +140,7 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 }
 img {
 	height: 100%;
@@ -348,7 +349,7 @@ p {
 #hero h1 {
 	display: block;
 	width: fit-content;
-	font-size: 4rem;
+	font-size: 6vh;
 	position: relative;
 	color: transparent;
 	animation: text_reveal 0.5s ease forwards;
