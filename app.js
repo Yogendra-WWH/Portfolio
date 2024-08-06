@@ -248,3 +248,22 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yogendra Pratap",
+      "jobTitle": "Software Engineer",
+      "url": "https://wealthwisehub.in",
+      "sameAs": [
+        "https://www.linkedin.com/in/yogendra-pratap-95546a150",
+        "https://github.com/Yogendra-WWH"
+      ],
+      "description": "Yogendra Pratap is a Software Engineer with expertise in web development, software design, and cloud computing. Explore my portfolio to learn more about my projects and professional journey.",
+      "image": "https://wealthwisehub.in/./img/img-2.jpg"
+    });
+    document.head.appendChild(script);
+  });
