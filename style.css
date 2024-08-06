@@ -69,7 +69,38 @@ html {
 	  opacity: 1;
 	}
   }
+
+  .animated-name {
+	display: inline-block; /* Needed for scaling */
+	font-size: 2.5rem; /* Adjust font size */
+	color: #137867; /* Initial text color */
+	transition: transform 0.5s ease, color 0.5s ease; /* Smooth transition */
+	animation: fadeIn 2s forwards; /* Initial fade-in animation */
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px); /* Start from below */
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0); /* End at original position */
+	}
+}
+
+.animated-name:hover {
+	transform: scale(1.1); /* Scale up on hover */
+	color: #007bff; /* Change color on hover */
+}
   
+  #skills1{
+	text-align: left;
+  }
+  #skills2{
+	text-align: left;
+  }
+
   .close {
 	color: #aaa;
 	float: right;
