@@ -93,13 +93,15 @@ html {
 /* CSS to initially truncate text */
 .content {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: calc(1.4rem * 3); /* Adjust based on the number of lines you want to show */
+    height: calc(1.4rem * 2); /* Adjust based on the number of lines you want to show */
     /* Add the following line for compatibility */
     line-clamp: 3; /* This property may not be fully supported in all browsers */
+	font-size: 0.9rem; /* Slightly smaller font size for mobile screens */
+    padding: 8px; /* Adjust padding for mobile */
 }
 
 
@@ -109,6 +111,8 @@ html {
         -webkit-line-clamp: 4;
         line-clamp: 4; /* This property may not be fully supported in all browsers */
         height: calc(1.4rem * 4); /* Adjust for tablet */
+		font-size: 1rem; /* Standard font size for tablets */
+        padding: 12px; /* Adjust padding for tablets */
     }
 }
 
@@ -118,6 +122,8 @@ html {
         -webkit-line-clamp: 5;
         line-clamp: 5; /* This property may not be fully supported in all browsers */
         height: calc(1.4rem * 5); /* Adjust for desktop */
+		font-size: 1.1rem; /* Slightly larger font size for desktops */
+        padding: 16px; /* Adjust padding for desktops */
     }
 }
 
@@ -186,7 +192,7 @@ p {
 	background-color: crimson;
 }
 .brand h1 {
-	font-size: 3rem;
+	font-size: 2rem;
 	text-transform: uppercase;
 	color: white;
 }
