@@ -9,6 +9,24 @@ html {
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 }
+   /* Button Styling */
+   .view-certificate-button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #008cba;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 10px;
+	cursor: pointer;
+	border: none;
+}
+
+.view-certificate-button:hover {
+	background-color: #005f5f;
+}
+
 .custom-box12 {
     background-color: darkgreen;
     border: none;
