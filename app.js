@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "https://github.com/Yogendra-WWH"
       ],
       "description": "Yogendra Pratap is a Software Engineer with expertise in web development, software design, and cloud computing. Explore my portfolio to learn more about my projects and professional journey.",
-      "image": "https://wealthwisehub.in/./img/img-2.jpg"
+      "image": "https://wealthwisehub.in/./img/Yogendra pratap delhi.jpg"
     });
     document.head.appendChild(script);
   });
