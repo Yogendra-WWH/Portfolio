@@ -120,28 +120,47 @@ input[type="password"] {
   }
 
   .animated-name {
-	display: inline-block; /* Needed for scaling */
-	font-size: 2.5rem; /* Adjust font size */
-	color: #137867; /* Initial text color */
-	transition: transform 0.5s ease, color 0.5s ease; /* Smooth transition */
-	animation: fadeIn 2s forwards; /* Initial fade-in animation */
+    display: inline-block; /* Ensure the text behaves like an inline element */
+    font-size: 2.5rem; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    background: linear-gradient(270deg, #1e3c72, #2a5298, #4b79a1, #283e51);
+    background-size: 200% 200%; /* Increase background size for smoother animation */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Make the text itself transparent */
+    background-clip: text;
+    color: transparent;
+    transition: transform 0.5s ease, background-position 5s ease; /* Smooth transition */
+    animation: gradient-animation 8s ease infinite, fadeIn 2s forwards; /* Initial fade-in and background animation */
 }
 
 @keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translateY(20px); /* Start from below */
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0); /* End at original position */
-	}
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .animated-name:hover {
-	transform: scale(1.1); /* Scale up on hover */
-	color: #007bff; /* Change color on hover */
+    transform: scale(1.1); /* Scale up on hover */
+    background-position: 100% 50%; /* Adjust background position on hover for a more dynamic effect */
 }
+
   
   #skills1{
 	text-align: left;
@@ -935,11 +954,16 @@ background-color: rgb(14, 72, 180);
 /* Contact Section */
 #contact .contact {
     flex-direction: column;
-    max-width: 1200px;
+    max-width: 500px;
+	max-height: auto;
     margin: 0 auto;
     width: 90%;
     padding: 50px 0;
     text-align: center;
+	border: 1px solid black;
+	background-color:rgb(23, 164, 113) ;
+	position: relative;
+    animation: bounceIn 1s ease-out; /* Animation */
 }
 
 #contact .contact-items {
@@ -949,13 +973,13 @@ background-color: rgb(14, 72, 180);
 #contact .contact .container {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #fff;
+    
     padding: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(143, 210, 209, 0.1);
     border-radius: 10px;
     border: 3px solid #007BFF;
-    position: relative;
-    animation: bounceIn 1s ease-out; /* Animation */
+  
+	
 }
 
 #contact .contact .container::before {
@@ -965,20 +989,21 @@ background-color: rgb(14, 72, 180);
     left: -5px;
     right: -5px;
     bottom: -5px;
-    border: 1px solid #007BFF;
+    border: 1px solid #169981;
     border-radius: 12px;
     z-index: -1;
 }
 
 #contact .contact .container h1 {
     margin-bottom: 20px;
-    color: #333;
+    color: black;
 }
 
 #contact .contact-form .form-group {
     margin-bottom: 20px;
     text-align: left;
     opacity: 0;
+	color: black;
     animation: fadeIn 0.5s ease-out forwards; /* Animation */
 }
 
@@ -1005,14 +1030,36 @@ background-color: rgb(14, 72, 180);
 #contact .contact-form .form-group label {
     display: block;
     margin-bottom: 5px;
-    color: #333;
+    font-weight: bold; /* Makes the text bold */
+    background: linear-gradient(270deg, #1e3c72, #2a5298, #012d54, #5f3305);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-animation 8s ease infinite;
+    font-size: 1.2em; /* Increase font size to make it more visible */
 }
+
+/* Gradient Animation */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 #contact .contact-form .form-group input,
 #contact .contact-form .form-group textarea {
-    width: calc(100% - 22px);
+    width: 280px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     border-radius: 5px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1034,7 +1081,7 @@ background-color: rgb(14, 72, 180);
 }
 
 #contact .contact-form .form-group button:hover {
-    background-color: #0056b3;
+    background-color: #892acd;
     transform: scale(1.05);
 }
 
